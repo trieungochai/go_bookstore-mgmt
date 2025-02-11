@@ -56,7 +56,7 @@ func GetBookById(Id int64) (*Book, error) {
 	return &book, nil
 }
 
-func Delete(Id int64) (*Book, error) {
+func DeleteBook(Id int64) (*Book, error) {
 	var book Book
 	// First fetch the book to be deleted
 	if err := db.Where("id = ?", Id).First(&book).Error; err != nil {
